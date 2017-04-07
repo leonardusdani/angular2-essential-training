@@ -1,0 +1,16 @@
+.popupwindow{
+  background-color: #ffffff;
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  border: 2px solid #000000;
+}
+
+.popupwindow ul li{
+  list-style: none;
+}
+
+.btnclose{
+  position: relative;
+  left: 78%;
+}

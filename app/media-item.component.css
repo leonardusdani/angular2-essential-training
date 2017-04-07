@@ -62,3 +62,13 @@ h2 {
   color: #ffffff;
   text-decoration: none;
 }
+
+.preview {
+  display: block;
+  background-color: #53ace4;
+  padding: 4px;
+  font-size: .8em;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+}

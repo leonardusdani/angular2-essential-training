@@ -6,6 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['app/app.component.css']
 })
 export class AppComponent {
+
+  edited = true;
+
+  onMediaItemDelete(mediaItem) {
+    
+  }
+
+  onPreviewPopup(popup){
+    console.log(popup);
+    this.edited = popup;
+  }
+
+  onClosePopup(popup){
+    console.log(popup);
+    this.edited = popup;
+  }
+
+
+
   firstMediaItem = {
     id: 1,
     name: "Firebug",
