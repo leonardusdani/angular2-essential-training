@@ -3,5 +3,6 @@
     <h1>Media Watch List</h1>
     <p class="description">Keeping track of the media I want to watch.</p>
   </header>
-  <mw-media-item-list></mw-media-item-list>
+  <mw-media-item-list (preview)="onPreview($event)"></mw-media-item-list>
 </section>
+<popup [hidden]="edited" (close)="onClosePopup($event)" [mediaItem]="mediaItem"></popup>

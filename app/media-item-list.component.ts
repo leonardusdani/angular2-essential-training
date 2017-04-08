@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'mw-media-item-list',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['app/media-item-list.component.css']
 })
 export class MediaItemListComponent {
+  @Output() preview = new EventEmitter();
 
   onMediaItemDelete(mediaItem) { }
 
@@ -17,7 +18,8 @@ export class MediaItemListComponent {
       category: "Science Fiction",
       year: 2010,
       watchedOn: 1294166565384,
-      isFavorite: false
+      isFavorite: false,
+      images: [{imageSource: 'media/01.png',id: 1},{imageSource: 'media/02.png', id: 2}, {imageSource: 'media/03.png', id: 3}]
     },
     {
       id: 2,
@@ -26,7 +28,8 @@ export class MediaItemListComponent {
       category: "Comedy",
       year: 2015,
       watchedOn: null,
-      isFavorite: true
+      isFavorite: true,
+      images: [{imageSource: 'media/01.png',id: 1},{imageSource: 'media/02.png', id: 2}, {imageSource: 'media/03.png', id: 3}]
     }, {
       id: 3,
       name: "The Redemption",
@@ -34,7 +37,8 @@ export class MediaItemListComponent {
       category: "Action",
       year: 2016,
       watchedOn: null,
-      isFavorite: false
+      isFavorite: false,
+      images: [{imageSource: 'media/01.png',id: 1},{imageSource: 'media/02.png', id: 2}, {imageSource: 'media/03.png', id: 3}]
     }, {
       id: 4,
       name: "Hoopers",
@@ -42,7 +46,8 @@ export class MediaItemListComponent {
       category: "Drama",
       year: null,
       watchedOn: null,
-      isFavorite: true
+      isFavorite: true,
+      images: [{imageSource: 'media/01.png',id: 1},{imageSource: 'media/02.png', id: 2}, {imageSource: 'media/03.png', id: 3}]
     }, {
       id: 5,
       name: "Happy Joe: Cheery Road",
@@ -50,7 +55,12 @@ export class MediaItemListComponent {
       category: "Action",
       year: 2015,
       watchedOn: 1457166565384,
-      isFavorite: false
+      isFavorite: false,
+      images: [{imageSource: 'media/01.png',id: 1},{imageSource: 'media/02.png', id: 2}, {imageSource: 'media/03.png', id: 3}]
     }
   ];
+
+  onPreview(mediaItem){
+    this.preview.emit(mediaItem);
+  }
 }

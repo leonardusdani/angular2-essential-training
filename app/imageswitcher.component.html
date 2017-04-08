@@ -1,0 +1,7 @@
+<div class="prev"><button (click)="onPrev()">Prev</button></div>
+<div class="content" *ngIf="images">
+  <div *ngFor="let image of images">
+    <img zoom *ngIf="image.id==index" [src]="image.imageSource">
+  </div>
+</div>
+<div class="next"><button (click)="onNext()">Next</button></div>

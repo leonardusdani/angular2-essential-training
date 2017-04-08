@@ -1,0 +1,19 @@
+.prev{
+  float: left;
+  width: 25%;
+}
+
+.next{
+  float: left;
+  width: 25%;
+}
+
+.content{
+  float: left;
+  width: 50%;
+}
+
+.is-zoom-hovering{
+  width: 100px;
+  height: 100px;
+}

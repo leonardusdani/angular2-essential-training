@@ -1,0 +1,17 @@
+<div *ngIf="mediaItem" class="popupwindow">
+  <button (click)="onClosePopup()" class="btnclose"><b>X</b></button>
+  <div>
+  <image-switcher [images]="getImages()"></image-switcher>
+  </div>
+  <p></p>
+  <div>
+  <ul>
+    <li>Selected MediaItem Preview</li>
+    <li>Name: {{ mediaItem.name }}</li>
+    <li>Medium: {{ mediaItem.medium }}</li>
+    <li>Category: {{ mediaItem.category }}</li>
+    <li>Year: {{ mediaItem.year }}</li>
+    <li>Watched On: {{ mediaItem.watchedOn }}</li>
+  </ul>
+  </div>
+</div>

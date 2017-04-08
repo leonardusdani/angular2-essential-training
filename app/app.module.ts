@@ -6,6 +6,9 @@ import { MediaItemComponent } from './media-item.component';
 import { MediaItemListComponent } from './media-item-list.component';
 import { FavoriteDirective } from './favorite.directive';
 import {CategoryListPipe} from './category-list.pipe';
+import {PopupComponent} from './popup.component';
+import {ImageSwitcherComponent} from './imageswitcher.component';
+import {ZoomDirective} from './zoom.directive';
 
 @NgModule({
   imports: [
@@ -16,7 +19,10 @@ import {CategoryListPipe} from './category-list.pipe';
     MediaItemComponent,
     MediaItemListComponent,
     FavoriteDirective,
-    CategoryListPipe
+    CategoryListPipe,
+    PopupComponent,
+    ImageSwitcherComponent,
+    ZoomDirective
   ],
   bootstrap: [
     AppComponent
