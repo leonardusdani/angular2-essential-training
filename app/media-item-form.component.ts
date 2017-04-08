@@ -18,7 +18,22 @@ export class MediaItemFormComponent {
       ])),
       category: new FormControl(''),
       year: new FormControl('', this.yearValidator),
+      movieid: new FormControl('',Validators.compose([
+        Validators.minLength(10),
+        Validators.maxLength(12),
+        Validators.pattern('[\\w\\-\\s\\/]+')
+      ])),
+      watchedon: new FormControl('',this.pastDateValidator)
     });
+  }
+
+  pastDateValidator(control){
+    if(new Date(control.value)>new Date()){
+      return {
+        'watchedon':true
+      }
+    }
+    return null;
   }
 
   yearValidator(control) {
@@ -31,7 +46,10 @@ export class MediaItemFormComponent {
     if(year >= minYear && year <= maxYear) {
       return null;
     } else {
-      return { 'year': true };
+      return { 'year': {
+        min: minYear,
+        max: maxYear
+      } };
     }
   }
 
