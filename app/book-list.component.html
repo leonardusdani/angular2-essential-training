@@ -1,1 +1,4 @@
-<book-item></book-item>
+<book-item 
+  *ngFor="let book of books" 
+  [book]="book" 
+  (bookItem)="onRemoveBook($event)"></book-item>

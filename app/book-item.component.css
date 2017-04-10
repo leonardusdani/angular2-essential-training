@@ -1,0 +1,10 @@
+.is-book{
+  margin: 10px;
+  border: 2px solid black;
+  padding: 5px;
+  width: 250px;
+}
+
+.is-book-hovering{
+  border: 2px solid crimson;
+}
